@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHREE HOTEL - ROOMS</title>
-  <?php include './Inc/links.php'; ?>
+  <title>SHREE HOTEL - CONTACT</title>
+  <?php include './../Inc/links.php'; ?>
 </head>
 
 <body class="bg-light">
 
 
-  <?php include './Inc/header.php'; ?>
+  <?php include './../Inc/header.php'; ?>
 
 
   <div class="my-5 px-4">
@@ -85,7 +85,7 @@
   </div>
 
 
-  <?php include './Inc/footer.php'; ?>
+  <?php include './../Inc/footer.php'; ?>
 
 </body>
 

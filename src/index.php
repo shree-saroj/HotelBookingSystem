@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHREE HOTEL - HOME</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <?php include './Inc/links.php'; ?>
+  <?php include './../Inc/links.php'; ?>
   <style>
     .availability-form {
       margin-top: -50px;
@@ -26,7 +26,7 @@
 <body class="bg-light">
 
 
-  <?php include './Inc/header.php'; ?>
+  <?php include './../Inc/header.php'; ?>
 
   <!-- Carousel -->
 
@@ -34,22 +34,22 @@
     <div class="swiper swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/1.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/1.png" class="w-100 d-block" />
         </div>
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/2.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/2.png" class="w-100 d-block" />
         </div>
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/3.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/3.png" class="w-100 d-block" />
         </div>
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/4.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/4.png" class="w-100 d-block" />
         </div>
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/5.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/5.png" class="w-100 d-block" />
         </div>
         <div class="swiper-slide">
-          <img src="./Assets/images/carousel/6.png" class="w-100 d-block" />
+          <img src="./../Assets/images/carousel/6.png" class="w-100 d-block" />
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 my-3">
         <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-          <img src="./Assets/images/rooms/1.jpg" class="card-img-top">
+          <img src="./../Assets/images/rooms/1.jpg" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Simple Room Name</h5>
             <h6 class="mb-4">रु200 per night</h6>
@@ -166,7 +166,7 @@
       </div>
       <div class="col-lg-4 col-md-6 my-3">
         <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-          <img src="./Assets/images/rooms/1.jpg" class="card-img-top">
+          <img src="./../Assets/images/rooms/1.jpg" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Simple Room Name</h5>
             <h6 class="mb-4">रु200 per night</h6>
@@ -228,7 +228,7 @@
       </div>
       <div class="col-lg-4 col-md-6 my-3">
         <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-          <img src="./Assets/images/rooms/1.jpg" class="card-img-top">
+          <img src="./../Assets/images/rooms/1.jpg" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Simple Room Name</h5>
             <h6 class="mb-4">रु200 per night</h6>
@@ -300,23 +300,23 @@
   <div class="container">
     <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-        <img src="./Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
+        <img src="./../Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
         <h5 class="mt-3">Wi-Fi</h5>
       </div>
       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-        <img src="./Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
+        <img src="./../Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
         <h5 class="mt-3">Wi-Fi</h5>
       </div>
       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-        <img src="./Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
+        <img src="./../Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
         <h5 class="mt-3">Wi-Fi</h5>
       </div>
       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-        <img src="./Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
+        <img src="./../Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
         <h5 class="mt-3">Wi-Fi</h5>
       </div>
       <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-        <img src="./Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
+        <img src="./../Assets/images/facilities/IMG_43553.svg" width="80px" class="d-block m-auto" />
         <h5 class="mt-3">Wi-Fi</h5>
       </div>
       <div class="col-lg-12 text-center mt-5">
@@ -333,7 +333,7 @@
       <div class="swiper-wrapper mb-5">
         <div class="swiper-slide bg-white p-4">
           <div class="profile d-flex align-items-center mb-3">
-            <img src="./Assets/images/facilities/IMG_41622.svg" width="30px" />
+            <img src="./../Assets/images/facilities/IMG_41622.svg" width="30px" />
             <h6 class="m-0 ms-2">Random User</h6>
           </div>
           <p>
@@ -349,7 +349,7 @@
         </div>
         <div class="swiper-slide bg-white p-4">
           <div class="profile d-flex align-items-center mb-3">
-            <img src="./Assets/images/facilities/IMG_41622.svg" width="30px" />
+            <img src="./../Assets/images/facilities/IMG_41622.svg" width="30px" />
             <h6 class="m-0 ms-2">Random User</h6>
           </div>
           <p>
@@ -365,7 +365,7 @@
         </div>
         <div class="swiper-slide bg-white p-4">
           <div class="profile d-flex align-items-center mb-3">
-            <img src="./Assets/images/facilities/IMG_41622.svg" width="30px" />
+            <img src="./../Assets/images/facilities/IMG_41622.svg" width="30px" />
             <h6 class="m-0 ms-2">Random User</h6>
           </div>
           <p>
@@ -431,7 +431,7 @@
 
   <!-- Footer -->
 
-  <?php include './Inc/footer.php'; ?>
+  <?php include './../Inc/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
