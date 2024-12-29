@@ -333,11 +333,24 @@ validateAdminLogin();
 
     function updateContactData() {
       let setAddress = document.getElementsByName('setAddress')[0].value;
+
       let setGMapLink = document.getElementsByName('setGMapLink')[0].value;
+
       let stieAboutFromModal = document.getElementsByName('setGMapLink')[0].value;
-      let setPhoneNumber = "{" + "PhoneOne:" + document.getElementsByName('setPhoneNumber')[0].value + "," + "PhoneTwo:" + document.getElementsByName('setPhoneNumber')[1].value + "}";
+
+      let setPhoneNumber = JSON.stringify({
+        "PhoneOne": document.getElementsByName('setPhoneNumber')[0].value,
+        "PhoneTwo": document.getElementsByName('setPhoneNumber')[1].value,
+      });
+
       let setEmail = document.getElementsByName('setEmail')[0].value;
-      let setSocialLinks = "{" + "x:" + document.getElementsByName('setSocialLinks')[0].value + "," + "facebook:" + document.getElementsByName('setSocialLinks')[1].value + "," + "instagram:" + document.getElementsByName('setSocialLinks')[2].value + "}";
+
+      let setSocialLinks = JSON.stringify({
+        "x": document.getElementsByName('setSocialLinks')[0].value,
+        "instagram": document.getElementsByName('setSocialLinks')[1].value,
+        "facebook": document.getElementsByName('setSocialLinks')[2].value
+      });
+
       let setIFrameLink = document.getElementsByName('setIFrameLink')[0].value;
 
       let sendCommand = "setAddress=" + setAddress + "&setGMapLink=" + setGMapLink + "&setPhoneNumber=" + setPhoneNumber + "&setEmail=" + setEmail + "&setSocialLinks=" + setSocialLinks + "&setIFrameLink=" + setIFrameLink + "&updateContactsData";

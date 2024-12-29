@@ -38,7 +38,7 @@ if (isset($_POST['getContactsData'])) {
 if (isset($_POST["updateContactsData"])) {
     $sanitizedInput = sanitizeInput($_POST);
     $query = "UPDATE `tbhoteldetails` SET `hotelId`=? ,`address`=?,`phone`=?,`email`=?,`socials`=?,`gmap`=?,`iframe`=? WHERE `id` =?";
-    $value = [1, $sanitizedInput['setAddress'], $sanitizedInput['setPhoneNumber'], $sanitizedInput['setEmail'], $sanitizedInput['setSocialLinks'], $sanitizedInput['setGMapLink'], $sanitizedInput['setIFrameLink'], 1];
+    $value = [1, $sanitizedInput['setAddress'], $_POST['setPhoneNumber'], $sanitizedInput['setEmail'], $_POST['setSocialLinks'], $sanitizedInput['setGMapLink'], $sanitizedInput['setIFrameLink'], 1];
     $result = executeUpdateQuery($query, $value, 'issssssi');
     $jsonData = json_encode($result);
     echo ($jsonData);
