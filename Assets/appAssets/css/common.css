@@ -37,3 +37,27 @@ input[type="number"] {
   margin: 0 auto;
   height: 1.7px;
 }
+
+.custom-alert {
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 9999;
+}
+
+#dashboard-menu {
+  position: fixed;
+  height: 100%;
+  z-index: 1 !important;
+}
+
+@media screen and (max-width: 992px) {
+  #dashboard-menu {
+    position: fixed;
+    width: 100%;
+    height: auto;
+  }
+  #main-content {
+    margin-top: 60px;
+  }
+}

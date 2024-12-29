@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHREE HOTEL - ABOUT</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <?php include './../Inc/links.php'; ?>
+  <?php require './../../Inc/links.php'; ?>
   <style>
     .box:hover {
       border-top-color: var(--teal) !important;
@@ -17,7 +17,7 @@
 <body class="bg-light">
 
 
-  <?php include './../Inc/header.php'; ?>
+  <?php require './../../Inc/header.php'; ?>
 
 
   <div class="my-5 px-4">
@@ -37,7 +37,7 @@
         </p>
       </div>
       <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-1 order-1">
-        <img src="./../Assets/images/about/about.jpg" class="w-100" />
+        <img src="./../../Assets/images/about/about.jpg" class="w-100" />
       </div>
     </div>
   </div>
@@ -47,25 +47,25 @@
     <div class="row">
       <div class="col-lg-3 col-md-6 mb-4 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 text-center box">
-          <img src="./../Assets/images/about/hotel.svg" width="70px">
+          <img src="./../../Assets/images/about/hotel.svg" width="70px">
           <h4 class="mt-3">100+ ROOMS</h4>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 text-center box">
-          <img src="./../Assets/images/about/customers.svg" width="70px">
+          <img src="./../../Assets/images/about/customers.svg" width="70px">
           <h4 class="mt-3">200+ CUSTOMERS</h4>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 text-center box">
-          <img src="./../Assets/images/about/rating.svg" width="70px">
+          <img src="./../../Assets/images/about/rating.svg" width="70px">
           <h4 class="mt-3">150+ REVEIWS</h4>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 text-center box">
-          <img src="./../Assets/images/about/staff.svg" width="70px">
+          <img src="./../../Assets/images/about/staff.svg" width="70px">
           <h4 class="mt-3">200+ STAFFS</h4>
         </div>
       </div>
@@ -80,27 +80,27 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper mb-5">
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
-          <img src="./../Assets/images/about/Team.jpg" class="w-100" />
+          <img src="./../../Assets/images/about/Team.jpg" class="w-100" />
           <h5 class="mt-2">Random Person</h5>
         </div>
       </div>
@@ -109,7 +109,7 @@
   </div>
 
 
-  <?php include './../Inc/footer.php'; ?>
+  <?php require './../../Inc/footer.php'; ?>
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

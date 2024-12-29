@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHREE HOTEL - ROOMS</title>
-  <?php include './../Inc/links.php'; ?>
+  <?php require "./../../Inc/links.php"; ?>
 </head>
 
 <body class="bg-light">
 
 
-  <?php include './../Inc/header.php'; ?>
+  <?php require "./../../Inc/header.php"; ?>
 
 
   <div class="my-5 px-4">
@@ -76,7 +76,7 @@
         <div class="card mb-4 border-0 shadow">
           <div class="row g-0 p-3 align-items-center">
             <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-              <img src="./../Assets/images/rooms/1.jpg" class="img-fluid rounded">
+              <img src="./../../Assets/images/rooms/1.jpg" class="img-fluid rounded">
             </div>
             <div class="col-md-5 px-lg-3 px-md-3 px-0">
               <h5 class="mb-3">Simple Room Name</h5>
@@ -130,7 +130,7 @@
         <div class="card mb-4 border-0 shadow">
           <div class="row g-0 p-3 align-items-center">
             <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-              <img src="./../Assets/images/rooms/1.jpg" class="img-fluid rounded">
+              <img src="./../../Assets/images/rooms/1.jpg" class="img-fluid rounded">
             </div>
             <div class="col-md-5 px-lg-3 px-md-3 px-0">
               <h5 class="mb-3">Simple Room Name</h5>
@@ -184,7 +184,7 @@
         <div class="card mb-4 border-0 shadow">
           <div class="row g-0 p-3 align-items-center">
             <div class="col-md-5 mb-lg-0 mb-lg-0 mb-3">
-              <img src="./../Assets/images/rooms/1.jpg" class="img-fluid rounded">
+              <img src="./../../Assets/images/rooms/1.jpg" class="img-fluid rounded">
             </div>
             <div class="col-md-5 px-lg-3 px-md-3 px-0">
               <h5 class="mb-3">Simple Room Name</h5>
@@ -237,9 +237,10 @@
         </div>
       </div>
     </div>
+  </div>
 
 
-    <?php include './../Inc/footer.php'; ?>
+  <?php require "./../../Inc/footer.php"; ?>
 
 </body>
 

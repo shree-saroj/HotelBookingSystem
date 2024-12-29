@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHREE HOTEL - FACILITIES</title>
-  <?php include './../Inc/links.php'; ?>
+  <?php require './../../Inc/links.php'; ?>
   <style>
     .pop:hover {
       border-top-color: var(--teal) !important;
@@ -18,7 +18,7 @@
 <body class="bg-light">
 
 
-  <?php include './../Inc/header.php'; ?>
+  <?php require './../../Inc/header.php'; ?>
 
 
   <div class="my-5 px-4">
@@ -36,7 +36,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -47,7 +47,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -58,7 +58,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -69,7 +69,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -80,7 +80,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -91,7 +91,7 @@
       <div class="col-lg-4 col-md-6 mb-5 px-4">
         <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
           <div class="d-flex align-items-center mb-2">
-            <img src="./../Assets/images/facilities/IMG_43553.svg" width="40px" />
+            <img src="./../../Assets/images/facilities/IMG_43553.svg" width="40px" />
             <h5 class="m-0 ms-3">Wi-Fi</h5>
           </div>
           <p>
@@ -103,7 +103,7 @@
   </div>
 
 
-  <?php include './../Inc/footer.php'; ?>
+  <?php require './../../Inc/footer.php'; ?>
 
 </body>
 
