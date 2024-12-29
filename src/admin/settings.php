@@ -170,7 +170,7 @@ validateAdminLogin();
                         </div>
                         <div class="mb-3">
                           <label class="form-label fw-bold">E-Mail</label>
-                          <input name="setEmail" type="text" class="form-control shadow-none" required>
+                          <input name="setEmail" type="email" class="form-control shadow-none" required>
                         </div>
                       </div>
                       <div class="col-md-6">
