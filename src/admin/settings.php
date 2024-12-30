@@ -294,16 +294,13 @@ validateAdminLogin();
     });
 
     function getContactsData() {
-      let siteTitle = document.getElementById('siteTitle');
-      let stieAbout = document.getElementById('siteAbout');
-      let shutdownToggle = document.getElementById('shutdownWebsite');
-      let xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpRequest();
       xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
-        contactData = JSON.parse(this.responseText);
-        let phoneNumber = JSON.parse(contactData.phone);
-        let socialsData = JSON.parse(contactData.socials);
+        var contactData = JSON.parse(this.responseText);
+        var phoneNumber = JSON.parse(contactData.phone);
+        var socialsData = JSON.parse(contactData.socials);
         document.getElementById('address').innerText = contactData.address;
         document.getElementById('gmap').innerText = contactData.gmap;
         document.getElementsByClassName('contactNumbers')[0].innerText = phoneNumber.PhoneOne;
