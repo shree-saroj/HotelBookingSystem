@@ -3,7 +3,7 @@
 // Database configuration
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
-define("DB_PASS", "");
+define("DB_PASS", "Mysql@Shr33");
 define("DB_NAME", "db_shreehotel");
 
 function getDatabaseConnection()

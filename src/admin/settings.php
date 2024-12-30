@@ -222,7 +222,7 @@ validateAdminLogin();
       let stieAbout = document.getElementById('siteAbout');
       let shutdownToggle = document.getElementById('shutdownWebsite');
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "./../ajax/settings_crud.php", true);
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
         generalData = JSON.parse(this.responseText);
@@ -253,7 +253,7 @@ validateAdminLogin();
       let siteTitleFromModal = document.getElementsByName('siteTitle')[0].value;
       let stieAboutFromModal = document.getElementsByName('siteAbout')[0].value;
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "./../ajax/settings_crud.php", true);
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
         if (this.responseText > 0) {
@@ -276,11 +276,10 @@ validateAdminLogin();
     function shutdownWebsite() {
       let status = document.getElementById('shutdownWebsite').checked ? 1 : 0;
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "./../ajax/settings_crud.php", true);
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
         if (this.responseText != "") {
-          debugger
           getGeneralData();
           showAlert("success", "Status Of Site Shutdown Has Been Changed");
         } else {
@@ -299,10 +298,9 @@ validateAdminLogin();
       let stieAbout = document.getElementById('siteAbout');
       let shutdownToggle = document.getElementById('shutdownWebsite');
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "./../ajax/settings_crud.php", true);
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
-        debugger
         contactData = JSON.parse(this.responseText);
         let phoneNumber = JSON.parse(contactData.phone);
         let socialsData = JSON.parse(contactData.socials);
@@ -355,10 +353,9 @@ validateAdminLogin();
 
       let sendCommand = "setAddress=" + setAddress + "&setGMapLink=" + setGMapLink + "&setPhoneNumber=" + setPhoneNumber + "&setEmail=" + setEmail + "&setSocialLinks=" + setSocialLinks + "&setIFrameLink=" + setIFrameLink + "&updateContactsData";
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "./../ajax/settings_crud.php", true);
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
-        debugger
         if (this.responseText > 0) {
           showAlert("success", "Changes Saved");
           getContactsData();
