@@ -68,7 +68,7 @@ validateAdminLogin();
               <h5 class="card-title m-0">SHUTDOWN WEBSITE</h5>
               <div class="form-check form-switch">
                 <form>
-                  <input class="form-check-input" type="checkbox" id="shutdownWebsite">
+                  <input class="form-check-input shadow-none" type="checkbox" id="shutdownWebsite">
                   <label class="form-check-label">SHUTDOWN</label>
                 </form>
               </div>
@@ -354,7 +354,7 @@ validateAdminLogin();
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xhr.onload = function() {
         if (this.responseText > 0) {
-          showAlert("success", "Changes Saved");
+          showAlert("success", "Changes Saved Successfully");
           getContactsData();
         } else {
           showAlert("error", "Error Occured While Saving Changes");
