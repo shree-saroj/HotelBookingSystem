@@ -1,6 +1,12 @@
 <?php
 
-define("UPLOADS_DIR", $_SERVER['DOCUMENT_ROOT'].'/HotelBookingSystem/Assets/images/');
+// FrontEnd Upload Process Uses This Data
+define("SITE_URL", "http://127.0.0.1/HotelBookingSystem/");
+define("ABOUT_DIR", SITE_URL . "Assets/images/about/");
+
+
+// BackEnd Upload Process Uses This Data
+define("UPLOADS_DIR", $_SERVER['DOCUMENT_ROOT'] . '/HotelBookingSystem/Assets/images/');
 define("ABOUT_FOLDER", 'about/');
 function validateAdminLogin()
 {
@@ -54,12 +60,21 @@ function uploadImage($image, $folder)
         return 'inv_size';
     } else {
         $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
-        $rName = 'IMG_' . random_int(11111, 99999).".$ext";
+        $rName = 'IMG_' . random_int(11111, 99999) . ".$ext";
         $img_path = UPLOADS_DIR . $folder . $rName;
         if (move_uploaded_file($image['tmp_name'], $img_path)) {
             return $rName;
         } else {
             return 'upload_failed';
         }
+    }
+}
+
+function removeImage($image, $folder)
+{
+    if (unlink(UPLOADS_DIR . $folder . $image)) {
+        return true;
+    } else {
+        return false;
     }
 }

@@ -53,9 +53,36 @@ if (isset($_POST["addMember"])) {
     } else if ($imgR == 'upload_failed') {
         echo $imgR;
     } else {
-        $query = "INSERT INTO `db_shreehotel`.`teamdetails`(`name`,`picture`)VALUES(?,?)";
+        $query = "INSERT INTO `teamdetails`(`name`,`picture`)VALUES(?,?)";
         $value = [$sanitizedInput['memberPicture'], $imgR];
         $result = executeUpdateQuery($query, $value, 'ss');
         echo ($result);
+    }
+}
+if (isset($_POST["getMembers"])) {
+    $query = "SELECT * FROM `teamdetails` WHERE `active`=?";
+    $value = [1];
+    $result = executeSelectQuery($query, $value, 'i');
+    $data = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $row['picture'] = ABOUT_DIR . $row['picture'];
+        $data[] = $row;
+    }
+    $jsonData = json_encode($data);
+    echo $jsonData;
+}
+if (isset($_POST["removeMember"])) {
+    $sanitizedInput = sanitizeInput($_POST);
+    $value = [1, $sanitizedInput["removeMember"]];
+    $query = "SELECT * FROM `teamdetails` WHERE `active`=? AND `id`=?";
+    $result = executeSelectQuery($query, $value, 'ii');
+    $data = mysqli_fetch_assoc($result);
+    if (removeImage($data['picture'], ABOUT_FOLDER)) {
+        $query = "UPDATE `teamdetails` SET `active` = ? WHERE `id` = ?";
+        $value = [0, $sanitizedInput["removeMember"]];
+        $result = executeUpdateQuery($query, $value, 'ii');
+        echo $result;
+    } else {
+        echo 0;
     }
 }

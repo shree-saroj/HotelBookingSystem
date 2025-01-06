@@ -215,7 +215,8 @@ validateAdminLogin();
                 <i class="bi bi-plus-square"></i> Add
               </button>
             </div>
-            <div class="row" id="team-data"></div>
+            <div class="row" id="teamMembers">
+            </div>
           </div>
         </div>
 
@@ -252,6 +253,12 @@ validateAdminLogin();
 
   <?php require "./../../Inc/scripts.php"; ?>
   <script type="text/javascript">
+    window.onload = function() {
+      getGeneralData();
+      getContactsData();
+      getMembers();
+    }
+
     function getGeneralData() {
       let generalData = '';
       let siteTitle = document.getElementById('siteTitle');
@@ -273,11 +280,6 @@ validateAdminLogin();
         }
       }
       xhr.send("getGeneralData");
-    }
-
-    window.onload = function() {
-      getGeneralData();
-      getContactsData();
     }
 
     document.getElementById('generalEditModal').addEventListener('show.bs.modal', function(event) {
@@ -422,10 +424,8 @@ validateAdminLogin();
       dataImage.append('memberPicture', document.getElementById('memberName').value);
       dataImage.append('picture', document.getElementById('memberPicture').files[0]);
       dataImage.append('addMember', '');
-
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
-
       xhr.onload = function() {
         if (this.responseText == 'inv_img') {
           showAlert('error', 'Invalid Image Format');
@@ -435,11 +435,79 @@ validateAdminLogin();
           showAlert('error', 'Image Upload Failed');
         } else {
           showAlert('success', 'Member Added Successfully');
+          getMembers();
         }
       }
-
       xhr.send(dataImage);
     }
+
+    function getMembers() {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhr.onload = function() {
+        if (this.responseText != '') {
+          if (this.responseText != null) {
+            generalData = JSON.parse(this.responseText);
+            let teamCardDom = '';
+            for (let i = 0; i < generalData.length; i++) {
+              teamCardDom += `
+              <div class="col-md-2 mb-3">
+                <div class="card bg-dark text-white">
+                  <img src="${generalData[i]["picture"]}" class="card-img">
+                  <div class="card-img-overlay text-end">
+                    <button type="button" class="btn btn-danger btn-sm shadow-none" onclick="removeMember(${generalData[i]["id"]})">
+                      <i class="bi bi-trash-fill"></i>
+                      Delete
+                    </button>
+                  </div>
+                  <p class="card-text text-center px-3 py-2">${generalData[i]["name"]}</p>
+                </div>
+              </div>`;
+            }
+            document.getElementById('teamMembers').innerHTML = teamCardDom;
+          }
+        }
+      }
+      xhr.send("getMembers");
+    }
+
+    function removeMember(memberId) {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          let xhr = new XMLHttpRequest();
+          xhr.open("POST", "./../../Inc/ajax/settings_crud.php", true);
+          xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhr.onload = function() {
+            if (this.responseText == 1) {
+              // Swal.fire({
+              //   title: "Deleted!",
+              //   text: "Your file has been deleted.",
+              //   icon: "success"
+              // });
+              showAlert('success', 'Member Removed Successfully');
+              getMembers();
+            } else {
+              showAlert('error', 'Error Occured While Removing Member');
+            }
+          }
+          xhr.send("removeMember=" + memberId);
+        }
+      });
+    }
+
+    document.getElementById('teamAddUpdateModal').addEventListener('show.bs.modal', function(event) {
+      document.getElementById("memberName").value = "";
+      document.getElementById("memberPicture").value = "";
+    });
   </script>
 
 </body>
