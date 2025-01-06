@@ -1,5 +1,7 @@
 <?php
 
+define("UPLOADS_DIR", $_SERVER['DOCUMENT_ROOT'].'/HotelBookingSystem/Assets/images/');
+define("ABOUT_FOLDER", 'about/');
 function validateAdminLogin()
 {
     session_start();
@@ -39,5 +41,25 @@ function alert($type, $message)
         <button type="button" class="btn-close shadow-none" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         alert;
+    }
+}
+
+function uploadImage($image, $folder)
+{
+    $valid_mime = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
+    $img_mime = $image['type'];
+    if (!in_array($img_mime, $valid_mime)) {
+        return 'inv_img';
+    } else if (($image['size'] / (1024 * 1024)) > 2) {
+        return 'inv_size';
+    } else {
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $rName = 'IMG_' . random_int(11111, 99999).".$ext";
+        $img_path = UPLOADS_DIR . $folder . $rName;
+        if (move_uploaded_file($image['tmp_name'], $img_path)) {
+            return $rName;
+        } else {
+            return 'upload_failed';
+        }
     }
 }

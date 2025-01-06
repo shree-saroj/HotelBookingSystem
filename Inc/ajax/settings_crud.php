@@ -43,3 +43,19 @@ if (isset($_POST["updateContactsData"])) {
     $jsonData = json_encode($result);
     echo ($jsonData);
 }
+if (isset($_POST["addMember"])) {
+    $sanitizedInput = sanitizeInput($_POST);
+    $imgR = uploadImage($_FILES['picture'], ABOUT_FOLDER);
+    if ($imgR == 'inv_img') {
+        echo $imgR;
+    } else if ($imgR == 'inv_size') {
+        echo $imgR;
+    } else if ($imgR == 'upload_failed') {
+        echo $imgR;
+    } else {
+        $query = "INSERT INTO `db_shreehotel`.`teamdetails`(`name`,`picture`)VALUES(?,?)";
+        $value = [$sanitizedInput['memberPicture'], $imgR];
+        $result = executeUpdateQuery($query, $value, 'ss');
+        echo ($result);
+    }
+}
